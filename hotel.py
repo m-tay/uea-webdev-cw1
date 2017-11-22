@@ -9,9 +9,12 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/reviews')
+@app.route('/reviews', methods = ['GET'])
 def reviews():
-    return render_template('reviews.html')
+
+    reviewlist = readfile('static\\reviews.csv')
+
+    return render_template('reviews.html', reviewlist = reviewlist)
 
 
 @app.route('/guestReview', methods=['POST'])

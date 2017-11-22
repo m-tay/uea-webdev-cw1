@@ -21,5 +21,16 @@
         <input type = "submit" value = "Submit" />
     </form>
     <h2>Other guest's reviews</h2>
+    <table border="1">
+        {% for line in reviewlist %}
+        <tr>
+            {% for item in line%}
+            <td>
+            {{item}}
+            </td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
