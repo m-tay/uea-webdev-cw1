@@ -28,6 +28,7 @@ nav{
 	z-index: 5
 }
 #titleBlock{
+    position: relative;
 	height: 100%;
     flex: 1;
 	z-index: 6;
@@ -103,6 +104,17 @@ nav{
 	
 	background-color: #ddd;
 	
+}
+
+#reviewForm{
+    margin-top: 100%;
+	position: relative;
+
+}
+
+#guestReviews{
+	position: relative;
+
 }
 
 .section{
