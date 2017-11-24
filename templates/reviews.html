@@ -12,25 +12,51 @@
 
     </head>
 <body>
-    <h1>Reviews</h1>
-    <h2>Leave a review</h2>
-    <form action = "guestReview" method = "post">
-        Your name <input type = "text" name = "name"> <br>
-        Your rating (1-5) <input type = "text" name = "rating"> <br>
-        Any comments? <input type = "text" name = "comments"> <br>
-        <input type = "submit" value = "Submit" />
-    </form>
-    <h2>Other guest's reviews</h2>
-    <table border="1">
-        {% for line in reviewlist %}
-        <tr>
-            {% for item in line%}
-            <td>
-            {{item}}
-            </td>
+		<nav>
+			<div id="titleBlock">
+				<img src="static/logo.jpg">
+			</div>
+			<div id="navBlock">
+				<ul>
+					<a href=""><li>Home</li></a>
+					<a href=""><li>View Rooms</li></a>
+					<a href=""><li>Book A Room</li></a>
+                    <a href="reviews"><li>Reviews</li></a>
+					<a href=""><li>About Us</li></a>
+					<a href=""><li>Contact Us</li></a>
+				</ul>
+			</div>
+		</nav>
+    <div id = "reviewForm"></div>
+        <h1>Reviews</h1>
+        <h2>Leave a review</h2>
+        <form action = "guestReview" method = "post">
+            Your name <input type = "text" name = "name"> <br>
+            Your rating (1-5) <input type = "text" name = "rating"> <br>
+            Any comments? <input type = "text" name = "comments"> <br>
+            <input type = "submit" value = "Submit" />
+        </form>
+    </div>
+
+    <div id = "guestReviews">
+        <h2>Other guest's reviews</h2>
+        <table border="1">
+            <tr>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Rating (1-5)</th>
+                <th>Comments</th>
+            </tr>
+            {% for line in reviewlist %}
+            <tr>
+                {% for item in line%}
+                <td>
+                {{item}}
+                </td>
+                {% endfor %}
+            </tr>
             {% endfor %}
-        </tr>
-        {% endfor %}
-    </table>
+        </table>
+    </div>
 </body>
 </html>
