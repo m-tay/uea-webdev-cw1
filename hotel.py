@@ -9,19 +9,22 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/gallery')
+def gallery():
+    return render_template('gallery.html')
 
 @app.route('/reviews', methods = ['GET'])
 def reviews():
 
-    reviews = readfile('static\\reviews.csv')
+    currentreviews = readfile('static\\reviews.csv')
 
-    return render_template('reviews.html', reviewlist = reviews)
+    return render_template('reviews.html', reviewlist=currentreviews)
 
 
 @app.route('/guestReview', methods=['POST'])
 def guestreview():
     # Read in existing rows
-    reviews = readfile('static\\reviews.csv')
+    currentreviews = readfile('static\\reviews.csv')
 
     # Create and add new review
     date = datetime.datetime.now().date().strftime("%x")
@@ -30,14 +33,14 @@ def guestreview():
     comments = request.form[('comments')]
 
     newRow = [date, name, rating, comments]
-    reviews.append(newRow)
+    currentreviews.append(newRow)
 
     # Save new review list back to file
-    writefile('static\\reviews.csv', reviews)
+    writefile('static\\reviews.csv', currentreviews)
 
     # Reload page
-    reviews = readfile('static\\reviews.csv')
-    return render_template('reviews.html', reviewlist = reviews)
+    currentreviews = readfile('static\\reviews.csv')
+    return render_template('reviews.html', reviewlist=currentreviews)
 
 
 def readfile(filename):
