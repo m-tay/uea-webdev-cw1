@@ -47,15 +47,17 @@ nav{
 	/*Sizing*/
 	margin: 30px auto;
 	position: fixed;
-	width: 60vw;
+	width: 62vw; min-width: 600px;
 	height: 5em;
 	z-index: 2;
 	/*Flex*/
 	display: flex;
 	
 	/*Styling*/
-	border-radius: 10px;
-	
+	/*border-radius: 10px;*/
+    background-color: rgba(69, 187, 210, 0.4);
+    border-radius: 10px;
+    box-shadow: 0px -50px 9px 2px rgba(69, 187, 210, 0.4) , 0px 50px 9px 2px rgba(69, 187, 210, 0.4);
 }
 
 #nav-home{
@@ -77,12 +79,14 @@ nav{
 	margin: auto;
 	color: white;
 	font-family: Avantgarde;
-	font-size: 30px;7
+	font-size: 30px;
 	border-radius: 20px;
 }
 
 #nav-home a:hover{
-	box-shadow: 0px 0px 5px #888888;
+	font-size: 2em;
+    text-shadow: 0px 0px 10px #ddd;
+    transition: 0.1s ease-in-out;
 }
 
 
@@ -91,11 +95,45 @@ nav{
 	z-index: 2;
 	
 	/*Flex*/
+    display: flex;
+    align-content: center;
 	flex: 5;
 	
 	/*Styling*/
 	border-radius: 10px;
 	background-color: #cfeef4;
+}
+
+.nav-navigation-item{
+	/*Sizing*/
+	height: 100%;
+    width: 25%;
+	
+	/*Flex*/
+	display: flex;
+    align-content: center;
+	/*Styling*/
+	text-align: center;
+	border-radius: 10px;
+}
+
+.nav-navigation-item a{
+    width: 100%;
+    margin: 0;
+	text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+	color: #555;
+}
+
+.nav-navigation-item:hover {
+    background-color: #45d269;
+    transition: 2s ease-in-out;
+}
+
+#pageOn{
+    background-color: #45d2cd;
 }
 
 #content{
@@ -164,7 +202,7 @@ nav{
 
 .content-main-item{
 	/*Sizing*/
-	margin: 20px 5px;
+	margin: 20px 0px;
 	height: 500px;
 	width: 300px;
 	/*Flex*/
@@ -189,3 +227,6 @@ nav{
 	
 }
 
+.email{
+    color: white;
+}

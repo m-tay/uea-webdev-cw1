@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<title>Booking Page</title>
+			<link rel="stylesheet" type="text/css" href="static/hotelStylesheet.css">
+			<link rel="stylesheet" type="text/css" href="static/bookingStylesheet.css">
+            <script src="static/homepage.js"></script>
+			<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+	</head>
+    <body>
+		<div id="background-blue">
+		</div>
+		<nav>
+			<div id="nav-home">
+				<a href="/">Bayliss & Taylor</a>
+			</div>
+			<div id="nav-navigation">	
+                <div class="nav-navigation-item">
+                    <a href="/">
+                        <h1>Home</h1>
+                    </a>
+                </div>
+                <div class="nav-navigation-item" id="pageOn">
+                    <a href="/booking">
+                        <h1>Book</h1>
+                    </a>
+                </div>
+                <div class="nav-navigation-item">
+                    <a href="/reviews">
+                        <h1>Reviews</h1>
+                    </a>
+                </div>
+                <div class="nav-navigation-item">
+                    <a href="/">
+                        <h1>About</h1>
+                    </a>
+                </div>
+			</div>
+		</nav>
+		
+		<div id="content">
+			<div id="content-main">
+				
+				<div id="content-main-sections">
+					<div class="form">
+                        <h1 class="form-heading">Book A Room</h1>
+                        <form action = "guestBooking" method = "post">
+                            <div class="inputRow">
+                                <label for="name">Name</label>
+                                <input type = "text" name = "name"> <br>
+                            </div>
+                            <div class="inputRow">
+                                <label for="email">Email</label>
+                                <input type = "text" name = "email"> <br>
+                            </div>
+                            <div class="inputRow">
+                                <label for="arrival">Arrival Date</label>
+                                <input type = "text" name = "arrival"> <br>
+                            </div>
+                            <div class="inputRow">
+                                <label for="departure">Departure Date</label>
+                                <input type = "text" name = "departure"> <br>
+                            </div>
+							<div class="inputRow">
+								<input type = "submit" value = "Submit" />
+							</div>
+                        </form>
+                    </div>
+                    
+                    <div class="form">
+							<h1 class="form-heading">Confirmed Bookings</h1>
+							<table class="inputRow" border="1">
+                            <tr>
+                                <th>Date</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Arrival</th>
+                                <th>Departure</th>
+                            </tr>
+                            {% for line in bookinglist %}
+                                <tr>
+                                {% for item in line%}
+                                    <td>
+                                    {{item}}
+                                    </td>
+                                {% endfor %}
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+					
+					<div class="form">
+						<p>If you have any extra questions or queries about booking or our
+							booking process, feel free to email us at issue@baylisstaylor.com or
+							phone us between the hours of <span class="email"> 07:00 - 23:00 </span> at <span class="email">01603 368 297</span>. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+    </body>
+</html>
