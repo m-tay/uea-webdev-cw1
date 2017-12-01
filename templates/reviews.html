@@ -2,60 +2,122 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-            <title>The Bayliss Taylor Hotel</title>
-            <meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+			<title>Reviews Page</title>
+			<link rel="stylesheet" type="text/css" href="static/hotelStylesheet.css">
+            <link rel="stylesheet" type="text/css" href="static/bookingStylesheet.css">
 			<script src="static/homepage.js"></script>
-			<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+			<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
 	</head>
-    <head>
-
-    </head>
-<body>
+	
+	<body>
+	
+	<!--
+	ON NAVIGATION BAR:
+		-Local Attractions
+		-Reviews
+		-Book A Room
+	ON HOME PAGE:
+		- Local Attractions overview + link
+		- Updated Live Reviews
+		- Slideshow of pictures
+		- Book a room overview + link
+	-->
+	
+		<div id="background-blue">
+		</div>
 		<nav>
-			<div id="titleBlock">
-				<img src="static/logo.jpg">
+			<div id="nav-home">
+				<a href="/">Bayliss & Taylor</a>
 			</div>
-			<div id="navBlock">
-				<ul>
-					<a href=""><li>Home</li></a>
-					<a href=""><li>View Rooms</li></a>
-					<a href=""><li>Book A Room</li></a>
-                    <a href="reviews"><li>Reviews</li></a>
-					<a href=""><li>About Us</li></a>
-					<a href=""><li>Contact Us</li></a>
-				</ul>
+			<div id="nav-navigation">	
+                <div class="nav-navigation-item">
+                    <a href="/">
+                        <h1>Home</h1>
+                    </a>
+                </div>
+                <div class="nav-navigation-item">
+                    <a href="/booking">
+                        <h1>Book</h1>
+                    </a>
+                </div>
+                <div class="nav-navigation-item" id="pageOn">
+                    <a href="/">
+                        <h1>Reviews</h1>
+                    </a>
+                </div>
+                <div class="nav-navigation-item">
+                    <a href="/">
+                        <h1>About</h1>
+                    </a>
+                </div>
 			</div>
 		</nav>
-    <div id = "reviewForm"></div>
-        <h1>Reviews</h1>
-        <h2>Leave a review</h2>
-        <form action = "guestReview" method = "post">
-            Your name <input type = "text" name = "name"> <br>
-            Your rating (1-5) <input type = "text" name = "rating"> <br>
-            Any comments? <input type = "text" name = "comments"> <br>
-            <input type = "submit" value = "Submit" />
-        </form>
-    </div>
+		
+		<div id="content">
+			<div id="content-main">
 
-    <div id = "guestReviews">
-        <h2>Other guest's reviews</h2>
-        <table border="1">
-            <tr>
-                <th>Date</th>
-                <th>Name</th>
-                <th>Rating (1-5)</th>
-                <th>Comments</th>
-            </tr>
-            {% for line in reviewlist %}
-            <tr>
-                {% for item in line%}
-                <td>
-                {{item}}
-                </td>
-                {% endfor %}
-            </tr>
-            {% endfor %}
-        </table>
-    </div>
-</body>
+                <div id="content-main-sections">
+                    <div class="form">
+                        <h1 class="form-heading">Leave a review</h1>
+                        <div id = "reviewForm">
+
+                            <form action = "guestReview" method = "post">
+                                <div class="inputRow">
+                                    <label for="name">Name</label>
+                                    <input type = "text" name = "name"> <br>
+                                </div>
+
+                                <div class="inputRow">
+                                    <label for="rating">Rating (1 to 5)</label>
+                                    <input type = "text" name = "rating"> <br>
+                                </div>
+
+                                <div class="inputRow">
+                                    <label for="comments">Comments</label>
+                                    <input type = "text" name = "comments"> <br>
+                                </div>
+
+                                <div class="inputRow">
+                                    <input type = "submit" value = "Submit" />
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+
+
+                     <div class="form">
+
+
+                        <div id = "guestReviews">
+                         <h1 class="form-heading">Other guest's reviews</h1>
+                            <table border="1">
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Name</th>
+                                    <th>Rating (1-5)</th>
+                                    <th>Comments</th>
+                                </tr>
+                            {% for line in reviewlist %}
+                            <tr>
+                            {% for item in line%}
+                            <td>
+                            {{item}}
+                            </td>
+                            {% endfor %}
+                            </tr>
+                            {% endfor %}
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+	</body>
 </html>
+  

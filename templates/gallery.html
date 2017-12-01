@@ -3,84 +3,158 @@
 	<head>
 		<meta charset="UTF-8">
 			<title>Bayliss Taylor Hotel</title>
-            <!-- Stylesheets for PhotoSwipe library (image gallery) -->
-			<link rel="stylesheet" href="static/gallery/photoswipe.css">
-            <link rel="stylesheet" href="static/gallery/default-skin.css">
+            <link rel="stylesheet" type="text/css" href="static/galleryStylesheet.css">
+            <script src="static/gallery/galleryScript.js"></script>
 	</head>
 
 	<body>
 
-
-<button id="btn">Open PhotoSwipe</button>
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe.
-         It's a separate element, as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
-        <div class="pswp__container">
-            <!-- don't modify these 3 pswp__item elements, data is added later on -->
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
+		<div id="background-blue">
+		</div>
+		<nav>
+			<div id="nav-home">
+				<a href="/">Bayliss & Taylor</a>
+			</div>
+			<div id="nav-navigation">
+                <div class="nav-navigation-item" id="pageOn">
+                    <a href="/">
+                        <h1>Home</h1>
+                    </a>
                 </div>
-            </div>
+                <div class="nav-navigation-item">
+                    <a href="/booking">
+                        <h1>Book</h1>
+                    </a>
+                </div>
+                <div class="nav-navigation-item">
+                    <a href="/reviews">
+                        <h1>Reviews</h1>
+                    </a>
+                </div>
+                <div class="nav-navigation-item">
+                    <a href="/">
+                        <h1>About</h1>
+                    </a>
+                </div>
+			</div>
+		</nav>
 
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
+    	<div id="content">
+			<div id="content-main">
+				<div id="content-main-title">
+					<h1>Our hotel</h1>
+				</div>
 
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
 
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
 
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
+                <div class="row">
+                  <div class="column">
+                    <img src="/static/gallery/img/thumb_hotel1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img src="/static/gallery/img/thumb_hotel2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img src="/static/gallery/img/thumb_hotel3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img src="/static/gallery/img/thumb_hotel4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img src="/static/gallery/img/thumb_hotel5.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img src="/static/gallery/img/thumb_hotel6.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img src="/static/gallery/img/thumb_hotel7.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                </div>
+                </div>
 
-          </div>
+                <div id="myModal" class="modal">
+                  <span class="close cursor" onclick="closeModal()">&times;</span>
+                  <div class="modal-content">
 
-        </div>
+                    <div class="mySlides">
+                      <div class="numbertext">1 / 7</div>
+                      <img src="/static/gallery/img/hotel1.jpg" style="width:100%">
+                    </div>
 
-</div>
+                    <div class="mySlides">
+                      <div class="numbertext">2 / 7</div>
+                      <img src="/static/gallery/img/hotel2.jpg" style="width:100%">
+                    </div>
 
-        <script src="static/gallery/photoswipe.js"></script>
-        <script src="static/gallery/photoswipe-ui-default.js"></script>
-        <script src="static/gallery/ps.js"></script>
+                    <div class="mySlides">
+                      <div class="numbertext">3 / 7</div>
+                      <img src="/static/gallery/img/hotel3.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                      <div class="numbertext">4 / 7</div>
+                      <img src="/static/gallery/img/hotel4.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                      <div class="numbertext">5 / 7</div>
+                      <img src="/static/gallery/img/hotel5.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                      <div class="numbertext">6 / 7</div>
+                      <img src="/static/gallery/img/hotel6.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                      <div class="numbertext">7 / 7</div>
+                      <img src="/static/gallery/img/hotel7.jpg" style="width:100%">
+                    </div>
+
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <div class="caption-container">
+                      <p id="caption"></p>
+                    </div>
+
+                    <div class="column">
+                      <img class="demo" src="/static/gallery/img/thumb_hotel1.jpg" onclick="currentSlide(1)" alt="Hotel front">
+                    </div>
+
+                    <div class="column">
+                      <img class="demo" src="/static/gallery/img/thumb_hotel2.jpg" onclick="currentSlide(2)" alt="Library">
+                    </div>
+
+                    <div class="column">
+                      <img class="demo" src="/static/gallery/img/thumb_hotel3.jpg" onclick="currentSlide(3)" alt="Swimming pool">
+                    </div>
+
+                    <div class="column">
+                      <img class="demo" src="/static/gallery/img/thumb_hotel4.jpg" onclick="currentSlide(4)" alt="Bayliss Suite">
+                    </div>
+
+                    <div class="column">
+                      <img class="demo" src="/static/gallery/img/thumb_hotel5.jpg" onclick="currentSlide(4)" alt="Taylor Suite">
+                    </div>
+
+                    <div class="column">
+                      <img class="demo" src="/static/gallery/img/thumb_hotel6.jpg" onclick="currentSlide(4)" alt="Noir Suite">
+                    </div>
+
+                    <div class="column">
+                      <img class="demo" src="/static/gallery/img/thumb_hotel7.jpg" onclick="currentSlide(4)" alt="Hotel bar">
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+
+			</div>
+		</div>
+
+
 	</body>
 </html>
