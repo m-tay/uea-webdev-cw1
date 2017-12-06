@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<title>Booking Page</title>
+			<link rel="stylesheet" type="text/css" href="static/hotelStylesheet.css">
+			<link rel="stylesheet" type="text/css" href="static/bookingStylesheet.css">
+            <script src="static/homepage.js"></script>
+			<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+	</head>
+    <body>
+		<div id="background-blue">
+		</div>
+		
+		<div id="content">		
+				<div id="conformationBlock">
+                <div id="content-main-sections">
+					<form action = "booking" class="form">
+                        <h1 class="form-heading">Booking Request Sent</h1>
+                        <table class="row" border="1">
+                            <tr class="noEffect">
+								<td class="email">Name: </td><td>{{details[1]}}</td>
+                                <td class="email">Email: </td><td>{{details[2]}}</td>
+                            </tr>
+                            <tr class="noEffect">
+                                <td class="email">Room Choice: </td><td>{{details[3]}}</td>
+                            </tr>
+                            <tr class="noEffect">
+                                <td class="email">Arrival Date: </td><td>{{details[4]}}</td>
+                            </tr>
+                            <tr class="noEffect">
+                                <td class="email">Departure Date: </td><td>{{details[5]}}</td>
+                            </tr>
+                        </table>
+                        <h2>We will send you an email when your request has been verified</h2>
+						<div class="row">
+								<input type = "submit" value = "Ok!"/>
+							</div>
+                    </form>
+				</div>
+                </div>
+			</div>
+    </body>
+</html>

@@ -4,7 +4,6 @@
 		<meta charset="UTF-8">
 			<title>Reviews Page</title>
 			<link rel="stylesheet" type="text/css" href="static/hotelStylesheet.css">
-            <link rel="stylesheet" type="text/css" href="static/bookingStylesheet.css">
 			<script src="static/homepage.js"></script>
 			<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
 	</head>
@@ -24,6 +23,7 @@
 	-->
 	
 		<div id="background-blue">
+			<img src="/static/wide1.jpg" alt = "Backgroud image">
 		</div>
 		<nav>
 			<div id="nav-home">
@@ -40,13 +40,18 @@
                         <h1>Book</h1>
                     </a>
                 </div>
-                <div class="nav-navigation-item" id="pageOn">
-                    <a href="/">
+                <div class="nav-navigation-item"  id="pageOn">
+                    <a href="/reviews">
                         <h1>Reviews</h1>
                     </a>
                 </div>
+				<div class="nav-navigation-item">
+                    <a href="/gallery">
+                        <h1>Gallery</h1>
+                    </a>
+                </div>
                 <div class="nav-navigation-item">
-                    <a href="/">
+                    <a href="/about">
                         <h1>About</h1>
                     </a>
                 </div>
@@ -62,22 +67,22 @@
                         <div id = "reviewForm">
 
                             <form action = "guestReview" method = "post">
-                                <div class="inputRow">
+                                <div class="row">
                                     <label for="name">Name</label>
-                                    <input type = "text" name = "name"> <br>
+                                    <input type = "text" id = "name" name = "name" required> <br>
                                 </div>
 
-                                <div class="inputRow">
+                                <div class="row">
                                     <label for="rating">Rating (1 to 5)</label>
-                                    <input type = "text" name = "rating"> <br>
+                                    <input id="rating" name="rating" type="range" min="1" max="5" value="5"> <br>
                                 </div>
 
-                                <div class="inputRow">
+                                <div class="row">
                                     <label for="comments">Comments</label>
-                                    <input type = "text" name = "comments"> <br>
+                                    <input type = "text" id="comments" name = "comments"> <br>
                                 </div>
 
-                                <div class="inputRow">
+                                <div class="row">
                                     <input type = "submit" value = "Submit" />
                                 </div>
                             </form>
@@ -88,31 +93,41 @@
 
 
                      <div class="form">
-
-
-                        <div id = "guestReviews">
-                         <h1 class="form-heading">Other guest's reviews</h1>
-                            <table border="1">
-                                <tr>
-                                    <th>Date</th>
-                                    <th>Name</th>
-                                    <th>Rating (1-5)</th>
-                                    <th>Comments</th>
+                          <h1  class="form-heading">Other guest's reviews</h1>
+                            <table class="row">
+                                <tr class="noEffect">
+                                    <th class="headerFont">Date</th>
+                                    <th class="headerFont">Name</th>
+                                    <th class="headerFont">Rating (1-5)</th>
+                                    <th class="headerFont">Comments</th>
                                 </tr>
+							</table>
                             {% for line in reviewlist %}
-                            <tr>
-                            {% for item in line%}
-                            <td>
-                            {{item}}
-                            </td>
+							<div class="review">
+								<table class="row">
+									<tr class="review-noEffect">
+										<td>
+										    {{line[0]}}
+										</td>
+										<td>
+										    {{line[1]}}
+										</td>
+										<td>
+										    {{line[2]}}
+										</td>
+                                        <td>
+                                            "{{line[3]}}"
+                                        </td>
+									</tr>
+                                </table>
+							</div>
                             {% endfor %}
-                            </tr>
-                            {% endfor %}
-                            </table>
-                        </div>
+                            
+
                     </div>
                 </div>
             </div>
+        </div>
 
 
 

@@ -155,13 +155,14 @@ nav{
 }
 
 
-.row > .column {
+.galrow > .column {
     padding: 0 8px;
 
 }
 
-.row {
+.galrow {
     text-align: center;
+    margin-top: 10px;
 }
 
 .row:after {

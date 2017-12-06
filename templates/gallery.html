@@ -4,19 +4,21 @@
 		<meta charset="UTF-8">
 			<title>Bayliss Taylor Hotel</title>
             <link rel="stylesheet" type="text/css" href="static/galleryStylesheet.css">
+			<link rel="stylesheet" type="text/css" href="static/hotelStylesheet.css">
             <script src="static/gallery/galleryScript.js"></script>
 	</head>
 
 	<body>
 
 		<div id="background-blue">
+             <img src="/static/wide4.jpg" alt="Background image">
 		</div>
 		<nav>
 			<div id="nav-home">
 				<a href="/">Bayliss & Taylor</a>
 			</div>
 			<div id="nav-navigation">
-                <div class="nav-navigation-item" id="pageOn">
+                <div class="nav-navigation-item">
                     <a href="/">
                         <h1>Home</h1>
                     </a>
@@ -31,8 +33,15 @@
                         <h1>Reviews</h1>
                     </a>
                 </div>
+
+				<div class="nav-navigation-item"  id="pageOn">
+                    <a href="/gallery">
+                        <h1>Gallery</h1>
+                    </a>
+                </div>
+
                 <div class="nav-navigation-item">
-                    <a href="/">
+                    <a href="/about">
                         <h1>About</h1>
                     </a>
                 </div>
@@ -47,27 +56,27 @@
 
 
 
-                <div class="row">
+                <div class="galrow">
                   <div class="column">
-                    <img src="/static/gallery/img/thumb_hotel1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                    <img src="/static/gallery/img/thumb_hotel1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" alt="Hotel thumbnail">
                 </div>
                 <div class="column">
-                    <img src="/static/gallery/img/thumb_hotel2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                    <img src="/static/gallery/img/thumb_hotel2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow" alt="Library thumbnail">
                 </div>
                 <div class="column">
-                    <img src="/static/gallery/img/thumb_hotel3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+                    <img src="/static/gallery/img/thumb_hotel3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" alt="Pool thumbnail">
                 </div>
                 <div class="column">
-                    <img src="/static/gallery/img/thumb_hotel4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                    <img src="/static/gallery/img/thumb_hotel4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow" alt="Room 1 thumbnail">
                 </div>
                 <div class="column">
-                    <img src="/static/gallery/img/thumb_hotel5.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                    <img src="/static/gallery/img/thumb_hotel5.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow" alt="Room 2 thumbnail">
                 </div>
                 <div class="column">
-                    <img src="/static/gallery/img/thumb_hotel6.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                    <img src="/static/gallery/img/thumb_hotel6.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow" alt="Room 3 thumbnail">
                 </div>
                 <div class="column">
-                    <img src="/static/gallery/img/thumb_hotel7.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                    <img src="/static/gallery/img/thumb_hotel7.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow" alt="Bar thumbnail">
                 </div>
                 </div>
 
@@ -77,37 +86,37 @@
 
                     <div class="mySlides">
                       <div class="numbertext">1 / 7</div>
-                      <img src="/static/gallery/img/hotel1.jpg" style="width:100%">
+                      <img src="/static/gallery/img/hotel1.jpg" style="width:100%" alt="Hotel facade">
                     </div>
 
                     <div class="mySlides">
                       <div class="numbertext">2 / 7</div>
-                      <img src="/static/gallery/img/hotel2.jpg" style="width:100%">
+                      <img src="/static/gallery/img/hotel2.jpg" style="width:100%" alt="Library">
                     </div>
 
                     <div class="mySlides">
                       <div class="numbertext">3 / 7</div>
-                      <img src="/static/gallery/img/hotel3.jpg" style="width:100%">
+                      <img src="/static/gallery/img/hotel3.jpg" style="width:100%" alt="Pool">
                     </div>
 
                     <div class="mySlides">
                       <div class="numbertext">4 / 7</div>
-                      <img src="/static/gallery/img/hotel4.jpg" style="width:100%">
+                      <img src="/static/gallery/img/hotel4.jpg" style="width:100%" alt="Room 1">
                     </div>
 
                     <div class="mySlides">
                       <div class="numbertext">5 / 7</div>
-                      <img src="/static/gallery/img/hotel5.jpg" style="width:100%">
+                      <img src="/static/gallery/img/hotel5.jpg" style="width:100%" alt="Room 2">
                     </div>
 
                     <div class="mySlides">
                       <div class="numbertext">6 / 7</div>
-                      <img src="/static/gallery/img/hotel6.jpg" style="width:100%">
+                      <img src="/static/gallery/img/hotel6.jpg" style="width:100%" alt="Room 3">
                     </div>
 
                     <div class="mySlides">
                       <div class="numbertext">7 / 7</div>
-                      <img src="/static/gallery/img/hotel7.jpg" style="width:100%">
+                      <img src="/static/gallery/img/hotel7.jpg" style="width:100%" alt="Bar">
                     </div>
 
 
@@ -135,15 +144,15 @@
                     </div>
 
                     <div class="column">
-                      <img class="demo" src="/static/gallery/img/thumb_hotel5.jpg" onclick="currentSlide(4)" alt="Taylor Suite">
+                      <img class="demo" src="/static/gallery/img/thumb_hotel5.jpg" onclick="currentSlide(5)" alt="Taylor Suite">
                     </div>
 
                     <div class="column">
-                      <img class="demo" src="/static/gallery/img/thumb_hotel6.jpg" onclick="currentSlide(4)" alt="Noir Suite">
+                      <img class="demo" src="/static/gallery/img/thumb_hotel6.jpg" onclick="currentSlide(6)" alt="Noir Suite">
                     </div>
 
                     <div class="column">
-                      <img class="demo" src="/static/gallery/img/thumb_hotel7.jpg" onclick="currentSlide(4)" alt="Hotel bar">
+                      <img class="demo" src="/static/gallery/img/thumb_hotel7.jpg" onclick="currentSlide(7)" alt="Hotel bar">
                     </div>
                   </div>
                 </div>
