@@ -4,19 +4,19 @@
 		<meta charset="UTF-8">
 			<title>Booking Page</title>
 			<link rel="stylesheet" type="text/css" href="static/hotelStylesheet.css">
-			<link rel="stylesheet" type="text/css" href="static/bookingStylesheet.css">
             <script src="static/homepage.js"></script>
 			<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
 	</head>
     <body>
 		<div id="background-blue">
+            <img src="/static/wide2.jpg" alt="Hotel background">
 		</div>
 		<nav>
 			<div id="nav-home">
 				<a href="/">Bayliss & Taylor</a>
 			</div>
 			<div id="nav-navigation">	
-                <div class="nav-navigation-item">
+                <div class="nav-navigation-item" >
                     <a href="/">
                         <h1>Home</h1>
                     </a>
@@ -31,8 +31,13 @@
                         <h1>Reviews</h1>
                     </a>
                 </div>
+				<div class="nav-navigation-item">
+                    <a href="/gallery">
+                        <h1>Gallery</h1>
+                    </a>
+                </div>
                 <div class="nav-navigation-item">
-                    <a href="/">
+                    <a href="/about">
                         <h1>About</h1>
                     </a>
                 </div>
@@ -45,50 +50,75 @@
 				<div id="content-main-sections">
 					<div class="form">
                         <h1 class="form-heading">Book A Room</h1>
-                        <form action = "guestBooking" method = "post">
-                            <div class="inputRow">
+                        <form class="booking" action = "guestBooking" method = "post">
+                            <div class="row">
                                 <label for="name">Name</label>
-                                <input type = "text" name = "name"> <br>
+                                <input type = "text" name = "name" id = "name" required> <br>
                             </div>
-                            <div class="inputRow">
+                            <div class="row">
                                 <label for="email">Email</label>
-                                <input type = "text" name = "email"> <br>
+                                <input type = "text" name = "email" id = "email" required> <br>
                             </div>
-                            <div class="inputRow">
+							<div class="row">
+                                <label for="room">Room</label>
+								<select name = "room" id ="room">
+									<option>Any Room</option>
+									<option>Augustus Suite</option>
+									<option>Brown Suite</option>
+									<option>Denton Suite</option>
+									<option>Everley Suite</option>
+									<option>Garrod Suite</option>
+									<option>Illidan Suite</option>
+									<option>Jezabel Suite</option>
+									<option>Matthewson Suite</option>
+									<option>Valliant Suite</option>
+									<option>Walter Suite</option>
+								</select><br>
+                            </div>
+                            <div class="row">
                                 <label for="arrival">Arrival Date</label>
-                                <input type = "text" name = "arrival"> <br>
+                                <input type = "date" name = "arrival" id = "arrival" min={{mindate}} required> <br>
                             </div>
-                            <div class="inputRow">
+                            <div class="row">
                                 <label for="departure">Departure Date</label>
-                                <input type = "text" name = "departure"> <br>
+                                <input type = "date" name = "departure" id = "departure" min={{mindate}} required> <br>
                             </div>
-							<div class="inputRow">
-								<input type = "submit" value = "Submit" />
+							<div class="row">
+								<input type = "submit" value = "Submit"/>
+							</div>
+							<div class="row">
+								<p id="errorSpace">{{errorMessage}}</p>
 							</div>
                         </form>
                     </div>
                     
+                    
                     <div class="form">
 							<h1 class="form-heading">Confirmed Bookings</h1>
-							<table class="inputRow" border="1">
-                            <tr>
-                                <th>Date</th>
-                                <th>Name</th>
-                                <th>Email</th>
+							<table class="row" border="1">
+                            <tr class="noEffect">
+                                <th>Room</th>
                                 <th>Arrival</th>
                                 <th>Departure</th>
                             </tr>
-                            {% for line in bookinglist %}
+                                {% for line in bookinglist %}
+                                {% if line[6] == "yes" %}
                                 <tr>
-                                {% for item in line%}
                                     <td>
-                                    {{item}}
+                                        {{line[3]}}
                                     </td>
-                                {% endfor %}
+                                    <td>
+                                        {{line[4]}}
+                                    </td>
+                                    <td>
+                                        {{line[5]}}
+                                    </td>
                                 </tr>
+                                {% endif %}
                             {% endfor %}
                         </table>
                     </div>
+					
 					
 					<div class="form">
 						<p>If you have any extra questions or queries about booking or our

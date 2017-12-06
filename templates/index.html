@@ -9,25 +9,20 @@
 	</head>
 	
 	<body>
-	
-	<!--
-	ON NAVIGATION BAR:
-		-Local Attractions
-		-Reviews
-		-Book A Room
-	ON HOME PAGE:
-		- Local Attractions overview + link
-		- Updated Live Reviews
-		- Slideshow of pictures
-		- Book a room overview + link
-	-->
-	
+	     <!--Top half background image... defualt blue-->
 		<div id="background-blue">
+            <img src="/static/wide3.jpg" alt = "Background">
 		</div>
+		
+		<!--Navigation-->
 		<nav>
+		
+			<!--Logo/Home button-->
 			<div id="nav-home">
 				<a href="/">Bayliss & Taylor</a>
 			</div>
+			
+			<!--Navigation Links-->
 			<div id="nav-navigation">	
                 <div class="nav-navigation-item" id="pageOn">
                     <a href="/">
@@ -44,58 +39,105 @@
                         <h1>Reviews</h1>
                     </a>
                 </div>
+				<div class="nav-navigation-item">
+                    <a href="/gallery">
+                        <h1>Gallery</h1>
+                    </a>
+                </div>
                 <div class="nav-navigation-item">
-                    <a href="/">
+                    <a href="/about">
                         <h1>About</h1>
                     </a>
                 </div>
 			</div>
+			
 		</nav>
 		
+		<!--Moves availible content down from the top and fills width-->
 		<div id="content">
+			<!--Content block that centers and sets width limits-->
 			<div id="content-main">
+			
+				<!--Small title tag-->
 				<div id="content-main-title">
 					<h1>Welcome!</h1>
 				</div>
+				
+				<!--Navigation-->
 				<div id="content-main-sections">
 					<div class="content-main-item">
 						<div class="content-main-item-image">
-						
+                            <a href="/booking"><img src = "static/index1.jpg" alt = "Booking image"></a>
 						</div>
 						<h1 class="content-main-item-text">
-							Book A Room!
+                            <a href="/booking">Book A Room!</a>
 						</h1>
 						<p class="content-main-item-text">
-							Want to visit for a short break?</br>
-							Make a booking request once you know the dates and your choice of room!</br>
-							It's easy and straightforward. </br>
+							Want to visit for a short break?<br>
+							Make a booking request once you know the dates and your choice of room!<br>
+							It's easy and straightforward. <br>
 							We will make sure to get back to you as soon as possible!
 						</p>
 					</div>
 					<div class="content-main-item">
 						<div class="content-main-item-image">
-						
+                            <a href="/reviews"><img src = "static/index2.jpg" alt = "Reviews image"></a>
 						</div>
 						<h1 class="content-main-item-text">
-							Reviews
+                            <a href="/reviews">Reviews</a>
 						</h1>
 						<p class="content-main-item-text">
-							View our satisfied customers feedback from their stays!</br>
-							If you have any complaints about your stay, please contact us at: <span class = "email">issues@baylisstaylor.com</span></br>
-							It's easy and straightforward. </br>
+							View our satisfied customers feedback from their stays!<br>
+							If you have any complaints about your stay, please contact us at: <span class = "email">issues@baylisstaylor.com</span><br>
+							It's easy and straightforward. <br>
 						</p>
 					</div>
 					<div class="content-main-item">
+						<div class="content-main-item-image">
+                            <a href="/gallery"><img src = "static/index3.jpg" alt = "Gallery image"></a>
+						</div>
+						<h1 class="content-main-item-text">
+                            <a href="/gallery">View our gallery</a>
+						</h1>
+						<p class="content-main-item-text">
+							A selection of images from our hotel<br>
+                            Take a virtual tour before you even step into our lobby - we're sure you'll like what you see!
+						</p>
 					</div>
 					<div class="content-main-item">
+						<div class="content-main-item-image">
+                            <img src = "static/index4.jpg" alt="Relaxtion image">
+						</div>
+						<h1 class="content-main-item-text">
+                            Ultimate relaxation
+						</h1>
+						<p class="content-main-item-text">
+                            Our state of the art, luxuriously appointed rooms will leave you feeling relaxed and refreshed.<br>
+                            They're so nice, you might struggle to leave!
+						</p>
 					</div>
 					<div class="content-main-item">
+						<div class="content-main-item-image">
+                            <img src = "static/index5.jpg" alt = "Dining room image">
+						</div>
+						<h1 class="content-main-item-text">
+                            Fine dining
+						</h1>
+						<p class="content-main-item-text">
+                            We pride ourselves on serving delicious, traditional food from a wide and varied menu.<br>
+                            No matter the length of your stay, you'll always enjoy our well appointed restaurant and bar.
+						</p>
 					</div>
 					<div class="content-main-item">
-					</div>
-					<div class="content-main-item">
-					</div>
-					<div class="content-main-item">
+						<div class="content-main-item-image">
+                            <img src = "static/index6.jpg" alt = "Customer service image">
+						</div>
+						<h1 class="content-main-item-text">
+                            Impeccable Customer Service
+						</h1>
+						<p class="content-main-item-text">
+                            All our staff pride ourselves on making your stay perfect. Our 24/7 concierge service is always available. Whatever you need, we'll make it happen for you.
+						</p>
 					</div>
 				</div>
 			</div>

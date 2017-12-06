@@ -1,3 +1,5 @@
+/* Styling for all pages*/
+
 *{
 	font-family: helvetica;
 }
@@ -11,18 +13,6 @@ body{
 	align-content: center;
 	justify-content: space-around;
 	background-color: #ccc;
-}
-
-#template{
-	/*Sizing*/
-	
-	
-	/*Flex*/
-	
-	
-	/*Styling*/
-	
-	
 }
 
 #background-blue{
@@ -153,7 +143,7 @@ nav{
 #content-main{
 	/*Sizing*/
 	z-index: 1;
-	width: 60vw; min-width: 350px;
+	width: 60vw; min-width: 500px;
 	height: auto; min-height: 30em;
 	margin-top: 28em;
 	/*Flex*/
@@ -196,8 +186,6 @@ nav{
 	justify-content: space-around;
 	
 	/*Styling*/
-	
-	
 }
 
 .content-main-item{
@@ -222,11 +210,192 @@ nav{
 }
 
 .content-main-item-text{
-	color: #444;
+	color: #222;
 	margin-left: 10px;
 	
 }
 
+.content-main-item-text a{
+	color: #222;
+	text-decoration: none;
+	
+}
+
+#map{
+	margin: 3em auto ;
+	order: 4;
+	width: 100%;
+}
+
+.fitImg{
+	width: 100%;
+	height: 100%;
+}
+
 .email{
     color: white;
+	font-weight: bold;
 }
+
+.form{
+    /*Sizing*/
+	margin: 20px 0px;
+	height: auto; min-height: 300px;
+	width: 80%;
+	/*Flex*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+	text-align: center;
+	/*Styling*/
+	background-color: silver;
+	
+}
+
+
+.review{
+	width:100%;
+	text-align: center;
+	flex-direction: column;
+	display: flex;
+	order:3;
+	margin: 20px 0;
+}
+
+.review:hover{
+	background-color: #dddeee;
+}
+
+.review-noEffect:hover{
+	background-color: #dddeee;
+}
+
+.booking{
+	order: 2;
+}
+
+.comment{
+	order: 3;
+}
+
+.address{
+	margin: 0 auto;
+	order: 2
+}
+
+table{
+	border: none;
+}
+
+tbody{
+	width: 100%;
+}
+
+th, td {
+    padding: 15px;
+    width: 8em;
+	text-align: center;
+	border-bottom: 2px solid grey;
+	border: none;
+}
+
+tr{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+tr:hover {
+	background-color: #f5f5f5;
+}
+
+tr.noEffect:hover {
+	background-color: silver;
+}
+
+.form-heading{
+    /*Sizing*/
+	margin: 20px 0px;
+	height: 1em;
+	width: 100%;
+	/*Flex*/
+    align-content: flex-start;
+	order: 1;
+	/*Styling*/
+	background-color: #dddeee;
+    text-align: center;
+}
+
+.row{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    order: 2;
+    display: flex;
+    justify-content: space-around;
+}
+
+.link{
+	text-decoration: none;
+	color: white;
+}
+
+.subText{
+	font-size: 20px;
+	color: white;
+}
+
+#errorSpace{
+	color: red;
+}
+
+/* Styling for booking/review pages*/
+input,select{
+    width: 25%; min-width: 150px;
+	height: 2em;
+	border: none;
+	border-radius: 5px;
+}
+
+label {
+	padding-top: 5px;
+    width: 40%; 
+    text-align: right; 
+    padding-right: 10px;
+}
+
+form{
+    width: 100%;
+}
+
+.headerFont{
+	font-size: 1.3em;
+}
+
+#reviewForm{
+	order:3;
+}
+
+
+/* Styling for conformation page */
+#conformationBlock{
+    /*Sizing*/
+	z-index: 1;
+	width: 60vw; min-width: 350px;
+	height: auto; min-height: 30em;
+    margin-top: 20em;
+	/*Flex*/
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: space-around;
+	
+	/*Styling*/
+	background-color: #ddd;
+	border-radius: 5px;
+	border: 1px solid grey;
+}
+
+
+/* Styling for gallery page */
